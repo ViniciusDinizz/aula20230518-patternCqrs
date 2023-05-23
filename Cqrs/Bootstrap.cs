@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Cqrs.Domain.Commands.CreatePerson;
-using Cqrs.Domain.Commands.DeletePerson;
-using Cqrs.Domain.Commands.UpdatePerson;
-using Cqrs.Domain.Contracts;
-using Cqrs.Domain.Queries.GetPerson;
-using Cqrs.Domain.Queries.ListPerson;
+using Cqrs.Domain.Commands.v1.CreatePerson;
+using Cqrs.Domain.Commands.v1.DeletePerson;
+using Cqrs.Domain.Commands.v1.UpdatePerson;
+using Cqrs.Domain.Contracts.v1;
+using Cqrs.Domain.Queries.v1.GetPerson;
+using Cqrs.Domain.Queries.v1.ListPerson;
 using Cqrs.Repository;
-using Cqrs.Repository.Respositories;
+using Cqrs.Repository.Respositories.v1;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MongoDB.Driver;
@@ -44,7 +44,7 @@ namespace Cqrs.Api
 
         private static void AddQueries(this IServiceCollection services)
         {
-            services.AddTransient<ListPersonQueryHandle>();
+            services.AddTransient<ListPersonQueryHandler>();
             services.AddTransient<GetPersonQueryHandler>();
         }
 

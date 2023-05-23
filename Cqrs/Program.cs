@@ -1,5 +1,5 @@
 using Cqrs.Api;
-using Cqrs.Domain.Commands.CreatePerson;
+using Cqrs.Domain.Commands.v1.CreatePerson;
 using Cqrs.Domain.Contracts;
 using Cqrs.Repository.Respositories;
 
